@@ -44,7 +44,7 @@ namespace CrudTimesCS.view
             // lblTituloJogadores
             // 
             this.lblTituloJogadores.AutoSize = true;
-            this.lblTituloJogadores.Font = new System.Drawing.Font("BankGothic Md BT", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblTituloJogadores.Font = new System.Drawing.Font("BankGothic Md BT", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTituloJogadores.ForeColor = System.Drawing.Color.Black;
             this.lblTituloJogadores.Location = new System.Drawing.Point(12, 58);
             this.lblTituloJogadores.Name = "lblTituloJogadores";
@@ -109,22 +109,27 @@ namespace CrudTimesCS.view
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Font = new System.Drawing.Font("BankGothic Md BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSalvar.BackColor = System.Drawing.Color.Black;
+            this.btnSalvar.Font = new System.Drawing.Font("BankGothic Md BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSalvar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnSalvar.Location = new System.Drawing.Point(439, 371);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(143, 51);
             this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Text = "Cadastrar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.UseVisualStyleBackColor = false;
             // 
             // btnCancelarJogadores
             // 
+            this.btnCancelarJogadores.BackColor = System.Drawing.Color.Black;
+            this.btnCancelarJogadores.Font = new System.Drawing.Font("BankGothic Md BT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCancelarJogadores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnCancelarJogadores.Location = new System.Drawing.Point(309, 371);
             this.btnCancelarJogadores.Name = "btnCancelarJogadores";
             this.btnCancelarJogadores.Size = new System.Drawing.Size(105, 51);
             this.btnCancelarJogadores.TabIndex = 8;
             this.btnCancelarJogadores.Text = "Cancelar";
-            this.btnCancelarJogadores.UseVisualStyleBackColor = true;
+            this.btnCancelarJogadores.UseVisualStyleBackColor = false;
             this.btnCancelarJogadores.Click += new System.EventHandler(this.btnCancelarJogadores_Click);
             // 
             // TelaCadastrarJogadores
@@ -145,6 +150,7 @@ namespace CrudTimesCS.view
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadastrarJogadores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TelaCadastrarJogadores";
             this.ResumeLayout(false);
             this.PerformLayout();
