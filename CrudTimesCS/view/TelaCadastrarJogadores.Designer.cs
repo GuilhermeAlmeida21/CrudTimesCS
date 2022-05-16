@@ -37,7 +37,7 @@ namespace CrudTimesCS.view
             this.tbxNomeJogadores = new System.Windows.Forms.TextBox();
             this.tbxEmailJogadores = new System.Windows.Forms.TextBox();
             this.tbxFoneJogadores = new System.Windows.Forms.TextBox();
-            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnCadastrarJogadores = new System.Windows.Forms.Button();
             this.btnCancelarJogadores = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -61,7 +61,6 @@ namespace CrudTimesCS.view
             this.lblEmailJogadores.Size = new System.Drawing.Size(67, 17);
             this.lblEmailJogadores.TabIndex = 1;
             this.lblEmailJogadores.Text = "Email:";
-            this.lblEmailJogadores.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblFoneJogadores
             // 
@@ -107,17 +106,18 @@ namespace CrudTimesCS.view
             this.tbxFoneJogadores.Size = new System.Drawing.Size(215, 29);
             this.tbxFoneJogadores.TabIndex = 6;
             // 
-            // btnSalvar
+            // btnCadastrarJogadores
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.Black;
-            this.btnSalvar.Font = new System.Drawing.Font("BankGothic Md BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSalvar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnSalvar.Location = new System.Drawing.Point(439, 371);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(143, 51);
-            this.btnSalvar.TabIndex = 7;
-            this.btnSalvar.Text = "Cadastrar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnCadastrarJogadores.BackColor = System.Drawing.Color.Black;
+            this.btnCadastrarJogadores.Font = new System.Drawing.Font("BankGothic Md BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCadastrarJogadores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCadastrarJogadores.Location = new System.Drawing.Point(439, 371);
+            this.btnCadastrarJogadores.Name = "btnCadastrarJogadores";
+            this.btnCadastrarJogadores.Size = new System.Drawing.Size(143, 51);
+            this.btnCadastrarJogadores.TabIndex = 7;
+            this.btnCadastrarJogadores.Text = "Cadastrar";
+            this.btnCadastrarJogadores.UseVisualStyleBackColor = false;
+            this.btnCadastrarJogadores.Click += new System.EventHandler(this.btnCadastrarJogadores_Click);
             // 
             // btnCancelarJogadores
             // 
@@ -134,12 +134,13 @@ namespace CrudTimesCS.view
             // 
             // TelaCadastrarJogadores
             // 
+            this.AcceptButton = this.btnCadastrarJogadores;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(604, 450);
             this.Controls.Add(this.btnCancelarJogadores);
-            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnCadastrarJogadores);
             this.Controls.Add(this.tbxFoneJogadores);
             this.Controls.Add(this.tbxEmailJogadores);
             this.Controls.Add(this.tbxNomeJogadores);
@@ -149,9 +150,11 @@ namespace CrudTimesCS.view
             this.Controls.Add(this.lblTituloJogadores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "TelaCadastrarJogadores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TelaCadastrarJogadores";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TelaCadastrarJogadores_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,7 +169,7 @@ namespace CrudTimesCS.view
         private System.Windows.Forms.TextBox tbxNomeJogadores;
         private System.Windows.Forms.TextBox tbxEmailJogadores;
         private System.Windows.Forms.TextBox tbxFoneJogadores;
-        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnCadastrarJogadores;
         private System.Windows.Forms.Button btnCancelarJogadores;
     }
 }

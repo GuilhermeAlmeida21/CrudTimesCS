@@ -33,6 +33,17 @@ namespace CrudTimesCS.view
             manipulaTimes manipulaTimes = new manipulaTimes();
             manipulaTimes.cadastroTimes();
 
+            if(times.Retorno == "Sim")
+            {
+                limparTela();
+                return;
+            }
+            else
+            {
+                fecharCadastro();
+                return;
+            }
+
         }
         public void abrirCadastro()
         {
@@ -41,6 +52,26 @@ namespace CrudTimesCS.view
         public void fecharCadastro()
         {
             this.Close();
+        }
+
+        public void limparTela()
+        {
+            foreach(Control ctl in this.Controls)
+            {
+                if( ctl is TextBox)
+                {
+                    ctl.Text = String.Empty;
+                }
+            }
+        }
+
+        private void TelaCadastrar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 27)
+            {
+                fecharCadastro();
+            }
+            
         }
     }
 }

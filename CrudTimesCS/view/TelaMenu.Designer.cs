@@ -67,8 +67,9 @@ namespace CrudTimesCS.view
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Sair";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // toolsToolStripMenuItem
             // 
@@ -82,14 +83,14 @@ namespace CrudTimesCS.view
             // cadastrarJogadoresMenu
             // 
             this.cadastrarJogadoresMenu.Name = "cadastrarJogadoresMenu";
-            this.cadastrarJogadoresMenu.Size = new System.Drawing.Size(124, 22);
+            this.cadastrarJogadoresMenu.Size = new System.Drawing.Size(180, 22);
             this.cadastrarJogadoresMenu.Text = "Cadastrar";
             this.cadastrarJogadoresMenu.Click += new System.EventHandler(this.cadastrarJogadoresMenu_Click);
             // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.optionsToolStripMenuItem.Text = "Pesquisar";
             // 
             // helpToolStripMenuItem

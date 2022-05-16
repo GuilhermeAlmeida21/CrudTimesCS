@@ -28,5 +28,10 @@ namespace CrudTimesCS.view
             TelaCadastrarJogadores telaCadastrar = new TelaCadastrarJogadores();
             telaCadastrar.ShowDialog();
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
