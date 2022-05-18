@@ -48,5 +48,42 @@ namespace CrudTimesCS.controller
                 throw;
             }
         }
+
+        public void pesquisarCodigoJogadores()
+        {
+            SqlConnection cn = new SqlConnection(conexaoBD.conectar());
+            SqlCommand cmd = new SqlCommand("pBuscarCodigoJogadores", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+
+
+            try
+            {
+                cmd.Parameters.AddWithValue("@CodJogadores", Jogadores.CodJogadores);
+                cn.Open();
+                var arrayDados = cmd.ExecuteReader();
+
+
+
+                if (arrayDados.Read())
+                {
+                    Jogadores.CodJogadores = Convert.ToInt32(arrayDados["CodJogadores"]);
+                    Jogadores.NomeJogadores= arrayDados["NomeJogadores"].ToString();
+                    Jogadores.EmailJogadores= arrayDados["EmailJogadores"].ToString();
+                    Jogadores.FoneJogadores= arrayDados["FoneJogadores"].ToString();
+                    Jogadores.Retorno = "Sim";
+                }
+                else
+                {
+                    MessageBox.Show("Codigo não localizado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Jogadores.Retorno = "Não";
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Erro",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
