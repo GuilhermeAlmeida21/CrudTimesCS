@@ -44,6 +44,8 @@ namespace CrudTimesCS.view
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -108,6 +110,8 @@ namespace CrudTimesCS.view
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.groupBox1.Controls.Add(this.btnDeletar);
+            this.groupBox1.Controls.Add(this.btnAlterar);
             this.groupBox1.Controls.Add(this.lblCodigo);
             this.groupBox1.Controls.Add(this.tbxFone);
             this.groupBox1.Controls.Add(this.tbxEmail);
@@ -202,6 +206,34 @@ namespace CrudTimesCS.view
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btnAlterar
+            // 
+            this.btnAlterar.BackColor = System.Drawing.Color.Black;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.Font = new System.Drawing.Font("BankGothic Md BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAlterar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAlterar.Location = new System.Drawing.Point(315, 301);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(100, 32);
+            this.btnAlterar.TabIndex = 1;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.BackColor = System.Drawing.Color.Black;
+            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletar.Font = new System.Drawing.Font("BankGothic Md BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDeletar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDeletar.Location = new System.Drawing.Point(421, 301);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(104, 32);
+            this.btnDeletar.TabIndex = 9;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            // 
             // TelaPesquisarJogadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -236,5 +268,7 @@ namespace CrudTimesCS.view
         private System.Windows.Forms.TextBox tbxPesquisarCodigo;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Button btnPesquisarJogador;
+        private System.Windows.Forms.Button btnDeletar;
+        private System.Windows.Forms.Button btnAlterar;
     }
 }

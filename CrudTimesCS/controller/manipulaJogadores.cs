@@ -85,5 +85,70 @@ namespace CrudTimesCS.controller
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void alterarJogadores()
+        {
+            SqlConnection cn = new SqlConnection(conexaoBD.conectar());
+            SqlCommand cmd = new SqlCommand("pAlterarJogadores", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+
+
+            try
+            {
+
+
+
+                cmd.Parameters.AddWithValue("@CodJogadores", Jogadores.CodJogadores);
+                cmd.Parameters.AddWithValue("@NomeJogadores", Jogadores.NomeJogadores);
+                cmd.Parameters.AddWithValue("@EmailJogadores", Jogadores.EmailJogadores);
+                cmd.Parameters.AddWithValue("@FoneJogadores", Jogadores.FoneJogadores);
+
+
+
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Jogador alterado com sucesso", "Atenção", MessageBoxButtons.OK);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("O Jogador não foi alterado", "Atenção", MessageBoxButtons.OK);
+            }
+            finally
+            {
+                if (cn.State != ConnectionState.Closed)
+                {
+                    cn.Close();
+                }
+            }
+        }
+
+        public void deletarJogadores()
+        {
+            SqlConnection cn = new SqlConnection(conexaoBD.conectar());
+            SqlCommand cmd = new SqlCommand("pDeletarJogadores", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+
+
+            try
+            {
+                cmd.Parameters.AddWithValue("CodJogadores", Jogadores.CodJogadores);
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Jogador excluido com sucesso", "Excluido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("O Jogador não pode ser excluido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (cn.State != ConnectionState.Closed)
+                {
+                    cn.Close();
+                }
+            }
+        }
     }
 }

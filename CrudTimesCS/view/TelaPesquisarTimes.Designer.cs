@@ -35,16 +35,18 @@ namespace CrudTimesCS.view
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.tbxFrase = new System.Windows.Forms.TextBox();
             this.tbxTime = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblCodigoTime = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxCodigoTimes = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnAlterarImagem = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -79,13 +81,13 @@ namespace CrudTimesCS.view
             // btnPesquisar
             // 
             this.btnPesquisar.BackColor = System.Drawing.Color.Black;
-            this.btnPesquisar.Font = new System.Drawing.Font("BankGothic Md BT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPesquisar.Font = new System.Drawing.Font("BankGothic Md BT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPesquisar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnPesquisar.Location = new System.Drawing.Point(452, 21);
+            this.btnPesquisar.Location = new System.Drawing.Point(430, 17);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(93, 23);
+            this.btnPesquisar.Size = new System.Drawing.Size(93, 27);
             this.btnPesquisar.TabIndex = 6;
-            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.Text = "Buscar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
@@ -103,13 +105,14 @@ namespace CrudTimesCS.view
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.groupBox1.Controls.Add(this.btnAlterarImagem);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnDeletar);
+            this.groupBox1.Controls.Add(this.btnAlterar);
             this.groupBox1.Controls.Add(this.tbxFrase);
             this.groupBox1.Controls.Add(this.tbxTime);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lblCodigoTime);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("BankGothic Md BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -126,34 +129,37 @@ namespace CrudTimesCS.view
             this.pictureBox1.Location = new System.Drawing.Point(329, 63);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(176, 108);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // btnDeletar
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("BankGothic Md BT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(430, 204);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnDeletar.BackColor = System.Drawing.Color.Black;
+            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletar.Font = new System.Drawing.Font("BankGothic Md BT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDeletar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDeletar.Location = new System.Drawing.Point(178, 231);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(109, 34);
+            this.btnDeletar.TabIndex = 8;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
-            // button1
+            // btnAlterar
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("BankGothic Md BT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(329, 204);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAlterar.BackColor = System.Drawing.Color.Black;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.Font = new System.Drawing.Font("BankGothic Md BT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAlterar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAlterar.Location = new System.Drawing.Point(29, 231);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(109, 34);
+            this.btnAlterar.TabIndex = 7;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // tbxFrase
             // 
@@ -179,13 +185,13 @@ namespace CrudTimesCS.view
             this.label4.TabIndex = 3;
             this.label4.Text = "Codigo";
             // 
-            // label3
+            // lblCodigoTime
             // 
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(29, 63);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 23);
-            this.label3.TabIndex = 2;
+            this.lblCodigoTime.BackColor = System.Drawing.Color.White;
+            this.lblCodigoTime.Location = new System.Drawing.Point(29, 63);
+            this.lblCodigoTime.Name = "lblCodigoTime";
+            this.lblCodigoTime.Size = new System.Drawing.Size(100, 23);
+            this.lblCodigoTime.TabIndex = 2;
             // 
             // label2
             // 
@@ -219,10 +225,28 @@ namespace CrudTimesCS.view
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(584, 378);
+            this.tabPage2.Size = new System.Drawing.Size(584, 358);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Pesquisar por Time";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnAlterarImagem
+            // 
+            this.btnAlterarImagem.BackColor = System.Drawing.Color.Black;
+            this.btnAlterarImagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterarImagem.Font = new System.Drawing.Font("BankGothic Md BT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAlterarImagem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAlterarImagem.Location = new System.Drawing.Point(329, 177);
+            this.btnAlterarImagem.Name = "btnAlterarImagem";
+            this.btnAlterarImagem.Size = new System.Drawing.Size(176, 33);
+            this.btnAlterarImagem.TabIndex = 10;
+            this.btnAlterarImagem.Text = "Alterar Imagem";
+            this.btnAlterarImagem.UseVisualStyleBackColor = false;
+            this.btnAlterarImagem.Click += new System.EventHandler(this.btnAlterarImagem_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // TelaPesquisarTimes
             // 
@@ -248,17 +272,19 @@ namespace CrudTimesCS.view
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCodigoTime;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDeletar;
+        private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.TextBox tbxFrase;
         private System.Windows.Forms.TextBox tbxTime;
         private System.Windows.Forms.TextBox tbxCodigoTimes;
+        private System.Windows.Forms.Button btnAlterarImagem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
