@@ -83,14 +83,14 @@ namespace CrudTimesCS.view
             // cadastrarJogadoresMenu
             // 
             this.cadastrarJogadoresMenu.Name = "cadastrarJogadoresMenu";
-            this.cadastrarJogadoresMenu.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarJogadoresMenu.Size = new System.Drawing.Size(124, 22);
             this.cadastrarJogadoresMenu.Text = "Cadastrar";
             this.cadastrarJogadoresMenu.Click += new System.EventHandler(this.cadastrarJogadoresMenu_Click);
             // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.optionsToolStripMenuItem.Text = "Pesquisar";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
@@ -135,9 +135,10 @@ namespace CrudTimesCS.view
             this.ClientSize = new System.Drawing.Size(825, 485);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "TelaMenu";
-            this.Text = "TelaMenu";
+            this.Text = "Cadastro Major Senac";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

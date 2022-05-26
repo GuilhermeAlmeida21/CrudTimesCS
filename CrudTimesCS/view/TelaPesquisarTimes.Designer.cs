@@ -29,11 +29,13 @@ namespace CrudTimesCS.view
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPesquisarTimes));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAlterarImagem = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
@@ -44,8 +46,6 @@ namespace CrudTimesCS.view
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxCodigoTimes = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnAlterarImagem = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -56,7 +56,6 @@ namespace CrudTimesCS.view
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -76,7 +75,7 @@ namespace CrudTimesCS.view
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(584, 358);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Pesquisar por código";
+            this.tabPage1.Text = "Pesquisar Times";
             // 
             // btnPesquisar
             // 
@@ -122,6 +121,20 @@ namespace CrudTimesCS.view
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações";
+            // 
+            // btnAlterarImagem
+            // 
+            this.btnAlterarImagem.BackColor = System.Drawing.Color.Black;
+            this.btnAlterarImagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterarImagem.Font = new System.Drawing.Font("BankGothic Md BT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAlterarImagem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAlterarImagem.Location = new System.Drawing.Point(329, 177);
+            this.btnAlterarImagem.Name = "btnAlterarImagem";
+            this.btnAlterarImagem.Size = new System.Drawing.Size(176, 33);
+            this.btnAlterarImagem.TabIndex = 10;
+            this.btnAlterarImagem.Text = "Alterar Imagem";
+            this.btnAlterarImagem.UseVisualStyleBackColor = false;
+            this.btnAlterarImagem.Click += new System.EventHandler(this.btnAlterarImagem_Click);
             // 
             // pictureBox1
             // 
@@ -220,30 +233,6 @@ namespace CrudTimesCS.view
             this.tbxCodigoTimes.Size = new System.Drawing.Size(116, 25);
             this.tbxCodigoTimes.TabIndex = 4;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(584, 358);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Pesquisar por Time";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // btnAlterarImagem
-            // 
-            this.btnAlterarImagem.BackColor = System.Drawing.Color.Black;
-            this.btnAlterarImagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterarImagem.Font = new System.Drawing.Font("BankGothic Md BT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAlterarImagem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnAlterarImagem.Location = new System.Drawing.Point(329, 177);
-            this.btnAlterarImagem.Name = "btnAlterarImagem";
-            this.btnAlterarImagem.Size = new System.Drawing.Size(176, 33);
-            this.btnAlterarImagem.TabIndex = 10;
-            this.btnAlterarImagem.Text = "Alterar Imagem";
-            this.btnAlterarImagem.UseVisualStyleBackColor = false;
-            this.btnAlterarImagem.Click += new System.EventHandler(this.btnAlterarImagem_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -254,8 +243,9 @@ namespace CrudTimesCS.view
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 410);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaPesquisarTimes";
-            this.Text = "TelaPesquisarTimes";
+            this.Text = "Cadastro de times";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -275,7 +265,6 @@ namespace CrudTimesCS.view
         private System.Windows.Forms.Label lblCodigoTime;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
